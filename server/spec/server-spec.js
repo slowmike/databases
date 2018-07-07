@@ -49,10 +49,7 @@ describe('Persistent Node Chat Server', function() {
 
         // TODO: You might have to change this test to get all the data from
         // your message table, since this is schema-dependent.
-        var queryString = `SELECT m.message AS message, u.name AS username, r.name AS roomname
-                            FROM messages m INNER JOIN users u
-                            ON (u.id = m.user_id) INNER JOIN rooms r
-                            ON (r.id = m.user_id)`;
+        var queryString = `SELECT * FROM messages`;
         var queryArgs = [];
 
         dbConnection.query(queryString, queryArgs, function(err, results) {
