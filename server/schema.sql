@@ -32,6 +32,7 @@ CREATE TABLE messages (
 
 /* Create other tables and define schemas for them here! */
 INSERT INTO users(name) values('Valjean');
+INSERT INTO messages(message, user_id, roomname) values('In mercy\'s name, three days is all I need.', 1, 'Hello');
 
 
 /*  Execute this file from the command line by typing:
