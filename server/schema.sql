@@ -6,7 +6,8 @@ USE chat;
 CREATE TABLE users (
   id INT NOT NULL AUTO_INCREMENT,
   name varchar(255),
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  UNIQUE (name)
 );
 
 -- CREATE TABLE rooms (
@@ -21,7 +22,7 @@ CREATE TABLE messages (
   user_id int NOT NULL,
   roomname varchar(255),
   -- room_id int NOT NULL,
-  message varchar(255),
+  message varchar(255) NOT NULL,
   -- createdAt varchar(255),
   -- updatedAt varchar(255),
   PRIMARY KEY (id),
@@ -30,7 +31,7 @@ CREATE TABLE messages (
 );
 
 /* Create other tables and define schemas for them here! */
-
+INSERT INTO users(name) values('Valjean');
 
 
 /*  Execute this file from the command line by typing:
